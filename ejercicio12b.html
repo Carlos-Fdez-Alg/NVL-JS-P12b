@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Práctica con JS</title>
+  </head>
+  <body>
+    <h1>Vamos a practicar declarar una función</h1>
+    <script type="application/javascript">
+      var pares = [];
+      var impares = [];
+      function esPar(a){
+        if(a % 2 === 0){
+          return true;
+        } else {
+          return false;
+        }
+      }
+      for(var i = 0; i < 50; i++){
+        var aux = Math.floor((Math.random()*100) + 1);
+        if (esPar(aux)) {
+          pares.push(aux);
+        } else {
+          impares.push(aux);
+        }
+      }
+      console.log('Impares: '+ impares);
+      console.log('Pares: '+ pares);
+    </script>
+  </body>
+</html>
